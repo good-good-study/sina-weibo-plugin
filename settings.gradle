@@ -1,0 +1,2 @@
+rootProject.name = "sina-weibo-plugin"
+include ':sina-weibo-sdk'
