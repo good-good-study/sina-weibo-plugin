@@ -11,13 +11,9 @@ task androidSourcesJar(type: Jar) {
 
 ext {
     PUBLISH_GROUP_ID = 'io.github.good-good-study'
-    PUBLISH_VERSION = '10.10.0'
+    PUBLISH_ARTIFACT_ID = 'sina-weibo-sdk'
+    PUBLISH_VERSION = '10.10.0'//1
 }
-//ext {
-//    PUBLISH_GROUP_ID = 'com.sunsta.livery'
-//    PUBLISH_ARTIFACT_ID = 'livery'
-//    PUBLISH_VERSION = '1.2.0'
-//}
 
 ext["signing.keyId"] = ''
 ext["signing.password"] = ''
@@ -47,13 +43,13 @@ publishing {
 
             // Two artifacts, the `aar` and the sources
 //            artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
-            artifact('../sina-weibo-sdk/src/main/libs/openDefault_10.10.0.aar')
+            artifact('../aar/openDefault-10.10.0.aar')//2
             artifact androidSourcesJar
 
             // Self-explanatory metadata for the most part
             pom {
                 name = PUBLISH_ARTIFACT_ID
-                description = '新浪微博sdk'
+                description = '新浪微博sdk openDefault_10.10.0.aar'//3
                 // If your project has a dedicated site, use its URL here
                 url = 'https://github.com/good-good-study/sina-weibo-plugin'
                 licenses {

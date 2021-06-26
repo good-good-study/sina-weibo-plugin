@@ -1,5 +1,3 @@
-//apply from: "config.gradle"
-
 buildscript {
     ext {
         bintray_version = '1.7.3'
@@ -30,14 +28,9 @@ buildscript {
 }
 
 allprojects {
-//    version = VERSION_NAME
-//    group = GROUP
     repositories {
         google()
         mavenCentral()
-        flatDir {
-            dirs '../sina-weibo-sdk/src/main/libs'
-        }
     }
 /*todo fix:
     防止-Xlint:unchecked 重新编译。错误*/

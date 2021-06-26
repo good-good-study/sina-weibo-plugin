@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.github.dcendents.android-maven'
-//group = 'com.github.good-good-study'
 
 android {
     compileSdkVersion 30
@@ -20,14 +18,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    api(name: 'openDefault_10.10.0', ext: 'aar')
-}
-
-ext {
-    PUBLISH_ARTIFACT_ID = 'livery'
 }
 apply from: '../publish.gradle'
